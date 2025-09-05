@@ -20,26 +20,29 @@
           <p>Loading activities...</p>
         </div>
       </section>
-
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
-          <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
-          </div>
-          <div class="form-group">
-            <label for="activity">Select Activity:</label>
-            <select id="activity" required>
-              <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
-            </select>
-          </div>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div id="message" class="hidden"></div>
-      </section>
     </main>
+
+    <!-- Registration Modal -->
+    <div id="registration-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal-title">Register for Activity</h3>
+          <button class="close-modal" aria-label="Close">&times;</button>
+        </div>
+        <form id="modal-signup-form">
+          <div class="form-group">
+            <label for="modal-email">Student Email:</label>
+            <input type="email" id="modal-email" required placeholder="your-email@mergington.edu" />
+          </div>
+          <input type="hidden" id="modal-activity" />
+          <div class="modal-actions">
+            <button type="button" class="cancel-btn">Cancel</button>
+            <button type="submit" class="register-btn">Register</button>
+          </div>
+        </form>
+        <div id="modal-message" class="hidden"></div>
+      </div>
+    </div>
 
     <footer>
       <p>&copy; 2023 Mergington High School</p>
